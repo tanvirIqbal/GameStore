@@ -2,7 +2,7 @@ GET http://localhost:5002/games
 
 
 ###
-GET http://localhost:5002/games/3cbc7b35-189c-48aa-ba4c-e381ba03b19d
+GET http://localhost:5002/games/425cd528-c947-4a14-869b-11b73d503de9
 
 ###
 POST http://localhost:5002/games
@@ -10,21 +10,26 @@ Content-Type: application/json
 
 {
   "name": "The Legend of Zelda: Breath of the Wild",
-  "genre": "Action-adventure",
-  "price": 594.99,
-  "releaseDate": "2017-03-03"
+  "genreId": "01522711-15d7-4218-9f03-a82d5ddab640",
+  "price": 59.99,
+  "releaseDate": "2017-03-03",
+  "description": "An epic adventure in the world of Hyrule."
 }
 
 ###
-PUT http://localhost:5002/games/3cbc7b35-189c-48aa-ba4c-e381ba03b19d
+PUT http://localhost:5002/games/425cd528-c947-4a14-869b-11b73d503de9
 Content-Type: application/json
 
 {
   "name": "The Legend of Zelda: Breath of the Wild II",
-  "genre": "Action-adventure",
-  "price": 19.99,
-  "releaseDate": "2017-03-03"
+  "genreId": "01522711-15d7-4218-9f03-a82d5ddab640",
+  "price": 29.99,
+  "releaseDate": "2017-03-03",
+  "description": "An epic adventure in the world of Hyrule 2nd time."
 }
 
 ###
 DELETE http://localhost:5002/games/223d1957-408b-4bae-8b4b-9fc17388f324
+
+###
+GET http://localhost:5002/genres
