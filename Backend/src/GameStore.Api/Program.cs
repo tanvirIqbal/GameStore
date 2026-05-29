@@ -45,8 +45,8 @@ app.MapPost("/games", (Game game) =>
 {
     game.Id = Guid.NewGuid();
     games.Add(game);
-    return Results.CreatedAtRoute(GetGamesEndpointName, new { id = game.Id }, game);    
-});
+    return Results.CreatedAtRoute(GetGamesEndpointName, new { id = game.Id }, game);
+}).WithParameterValidation();
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();
