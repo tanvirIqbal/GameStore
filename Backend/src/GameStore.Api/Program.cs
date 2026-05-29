@@ -3,6 +3,7 @@ using GameStore.Api.Models;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+const string GetGamesEndpointName = "GetGames";
 List<Game> games = new List<Game>
 {
     new Game
@@ -38,6 +39,13 @@ app.MapGet("/games/{id}", (Guid id) =>
 {
     var game = games.Find(g => g.Id == id);
     return game is not null ? Results.Ok(game) : Results.NotFound();
+}).WithName(GetGamesEndpointName);
+//POST /games
+app.MapPost("/games", (Game game) =>
+{
+    game.Id = Guid.NewGuid();
+    games.Add(game);
+    return Results.CreatedAtRoute(GetGamesEndpointName, new { id = game.Id }, game);    
 });
 //app.MapGet("/", () => "Hello World!");
 
