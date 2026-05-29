@@ -1,1 +1,5 @@
-GET http://localhost:5002
+GET http://localhost:5002/games
+
+
+###
+GET http://localhost:5002/games/39083a5a-f7f7-4e53-be40-738fd73f4c66
