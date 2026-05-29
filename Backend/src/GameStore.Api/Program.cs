@@ -61,6 +61,17 @@ app.MapPut("/games/{id}", (Guid id, Game updatedGame) =>
     game.ReleaseDate = updatedGame.ReleaseDate;
     return Results.NoContent();
 }).WithParameterValidation();
+//DELETE /games/{id}
+app.MapDelete("/games/{id}", (Guid id) =>
+{
+    var game = games.Find(g => g.Id == id);
+    if (game is null)
+    {
+        return Results.NotFound();
+    }
+    games.Remove(game);
+    return Results.NoContent();
+});
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();

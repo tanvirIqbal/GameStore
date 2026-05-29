@@ -25,3 +25,6 @@ Content-Type: application/json
   "price": 19.99,
   "releaseDate": "2017-03-03"
 }
+
+###
+DELETE http://localhost:5002/games/223d1957-408b-4bae-8b4b-9fc17388f324
