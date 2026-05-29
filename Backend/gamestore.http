@@ -2,7 +2,7 @@ GET http://localhost:5002/games
 
 
 ###
-GET http://localhost:5002/games/f21e8109-49e1-4eba-9c59-aa62ac7b62e3
+GET http://localhost:5002/games/3cbc7b35-189c-48aa-ba4c-e381ba03b19d
 
 ###
 POST http://localhost:5002/games
@@ -12,5 +12,16 @@ Content-Type: application/json
   "name": "The Legend of Zelda: Breath of the Wild",
   "genre": "Action-adventure",
   "price": 594.99,
+  "releaseDate": "2017-03-03"
+}
+
+###
+PUT http://localhost:5002/games/3cbc7b35-189c-48aa-ba4c-e381ba03b19d
+Content-Type: application/json
+
+{
+  "name": "The Legend of Zelda: Breath of the Wild II",
+  "genre": "Action-adventure",
+  "price": 19.99,
   "releaseDate": "2017-03-03"
 }

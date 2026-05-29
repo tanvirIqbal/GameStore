@@ -47,6 +47,20 @@ app.MapPost("/games", (Game game) =>
     games.Add(game);
     return Results.CreatedAtRoute(GetGamesEndpointName, new { id = game.Id }, game);
 }).WithParameterValidation();
+//PUT /games/{id}
+app.MapPut("/games/{id}", (Guid id, Game updatedGame) =>
+{
+    var game = games.Find(g => g.Id == id);
+    if (game is null)
+    {
+        return Results.NotFound();
+    }
+    game.Name = updatedGame.Name;
+    game.Genre = updatedGame.Genre;
+    game.Price = updatedGame.Price;
+    game.ReleaseDate = updatedGame.ReleaseDate;
+    return Results.NoContent();
+}).WithParameterValidation();
 //app.MapGet("/", () => "Hello World!");
 
 app.Run();
