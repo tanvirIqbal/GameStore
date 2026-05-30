@@ -11,7 +11,7 @@ namespace GameStore.Api.Features.Genres.GetGenres
         public static void MapGetGenres(this IEndpointRouteBuilder app, GameStoreData data)
         {
             //GET /genres
-            app.MapGet("/genres", () => data.GetGenres().Select(g => new GenreDto(g.Id, g.Name)));
+            app.MapGet("/", () => data.GetGenres().Select(g => new GenreDto(g.Id, g.Name)));
         }
     }
 }
