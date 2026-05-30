@@ -2,7 +2,7 @@ GET http://localhost:5002/games
 
 
 ###
-GET http://localhost:5002/games/425cd528-c947-4a14-869b-11b73d503de9
+GET http://localhost:5002/games/af113e2f-974b-44e9-90aa-777e56f20735
 
 ###
 POST http://localhost:5002/games
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:5002/games/425cd528-c947-4a14-869b-11b73d503de9
+PUT http://localhost:5002/games/af113e2f-974b-44e9-90aa-777e56f20735
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5002/games/223d1957-408b-4bae-8b4b-9fc17388f324
+DELETE http://localhost:5002/games/af113e2f-974b-44e9-90aa-777e56f20735
 
 ###
 GET http://localhost:5002/genres
